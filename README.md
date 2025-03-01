@@ -31,3 +31,29 @@ As **DEEP** tokens are burned, this platform provides a **live feed** of the upd
 - ⛓ **SUI Blockchain API** → Fetches the latest DEEP total supply  
 
 ---
+  
+  ### ☕ Here's how you can say thanks
+<p align="left">
+  <a href="https://www.buymeacoffee.com/jtcdev">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="Buy Me A Coffee"/>
+  </a>
+</p>
+
+###
+
+---
+
+### 📢 Connect With Me
+<div align="left">
+  <a href="https://x.com/JTCdev" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Twitter&logo=twitter&label=&color=1DA1F2&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="Twitter"  />
+  </a>
+  <a href="https://github.com/JTCdev" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=GitHub&logo=github&label=&color=333&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="GitHub"  />
+  </a>
+  <a href="https://discord.gg/JTCdev" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="Discord"  />
+  </a>
+</div>
+
+---
