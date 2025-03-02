@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import LearnAboutDeep from "./LearnAboutDeep";
 import MadeWithLove from "./MadeWithLove";
 
-const TOTAL_SUPPLY_START = 10_000_000_000; // 🔥 Fixed Initial Supply (10 Billion)
+const TOTAL_SUPPLY_START = 10_000_000_000;
 
 const DeepSupply = () => {
   const [totalSupply, setTotalSupply] = useState<number | null>(null);
@@ -19,8 +19,7 @@ const DeepSupply = () => {
         const data = await response.json();
 
         if (data && data.totalSupply) {
-          // ✅ Fix: Ensure correct unit handling
-          const currentSupply = Math.floor(Number(data.totalSupply) / 1_000_000); // Convert to Million
+          const currentSupply = Math.floor(Number(data.totalSupply) / 1_000_000); 
           const burned = TOTAL_SUPPLY_START - currentSupply;
 
           setTotalSupply(currentSupply);
@@ -36,7 +35,7 @@ const DeepSupply = () => {
       }
     };
 
-    fetchTotalSupply(); // ✅ Calls API once when component mounts
+    fetchTotalSupply(); 
   }, []);
 
   return (

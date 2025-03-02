@@ -1,11 +1,11 @@
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  const API_URL = "https://fullnode.mainnet.sui.io"; // ✅ Sui Public RPC (No API Key needed)
+  const API_URL = "https://fullnode.mainnet.sui.io"; // ✅ Sui Public RPC  
   const COIN_TYPE = "0xdeeb7a4662eec9f2f3def03fb937a663dddaa2e215b8078a284d026b7946c270::deep::DEEP";
 
   try {
-    // 🟢 Fetch Total Supply from Sui RPC
+    // Fetch Total Supply from Sui RPC
     const response = await fetch(API_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -24,10 +24,10 @@ export async function GET() {
       return NextResponse.json({ error: "Invalid response from Sui RPC", fullResponse: data }, { status: 500 });
     }
 
-    // ✅ Extract total supply value
+    // Extract total supply value
     const currentSupply = Number(data.result.value);
 
-    // ✅ Return only the total supply
+    // Return only the total supply
     return NextResponse.json({ totalSupply: currentSupply });
 
   } catch (error: unknown) {
