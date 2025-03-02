@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import LearnAboutDeep from "./LearnAboutDeep";
+import MadeWithLove from "./MadeWithLove";
 
 const TOTAL_SUPPLY_START = 10_000_000_000; // 🔥 Fixed Initial Supply (10 Billion)
 
@@ -38,24 +40,33 @@ const DeepSupply = () => {
   }, []);
 
   return (
-    <div className="p-6 bg-gray-900 text-white rounded-lg shadow-lg text-center max-w-md mx-auto">
-      <h2 className="text-2xl font-bold mb-4">🔥 DEEP Token Burn Tracker 🔥</h2>
+    <div className="relative flex flex-col justify-center items-center min-h-screen w-full z-10 space-y-6 p-6">
+    {/* Learn About DEEP Box - Above */}
+    <LearnAboutDeep />
 
+    {/* Token Supply Tracker - Middle */}
+    <div className="bg-gradient-to-br from-gray-800/70 to-gray-900/70 border border-gray-700 backdrop-blur-lg p-8 text-white rounded-2xl shadow-xl text-center max-w-md transition transform hover:scale-105">
+      <h2 className="text-3xl font-extrabold mb-4 text-white drop-shadow-lg">
+        DEEP Token Supply
+      </h2>
       {loading ? (
         <p className="text-gray-400 animate-pulse">Fetching supply data...</p>
       ) : error ? (
         <p className="text-red-500">{error}</p>
       ) : (
         <>
-          <p className="text-xl font-semibold text-blue-300">
-            <strong>Total Supply:</strong> {totalSupply?.toLocaleString()}
+          <p className="text-2xl font-bold text-green-200 drop-shadow-sm">
+            <strong>Supply:</strong> {totalSupply?.toLocaleString()}
           </p>
-          <p className="text-lg font-medium text-red-400 mt-2">
-            <strong>Burned DEEP:</strong> {burnedAmount?.toLocaleString()}
+            <p className="text-xl font-semibold text-red-400 mt-3 drop-shadow-sm">
+            <strong>🔥 DEEP:</strong> {burnedAmount?.toLocaleString()}
           </p>
         </>
       )}
     </div>
+      {/* Made with Love Box - Below */}
+      <MadeWithLove />
+  </div>
   );
 };
 
